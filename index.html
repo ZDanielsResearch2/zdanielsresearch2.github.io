@@ -66,6 +66,12 @@
     		color: blue;
 		text-decoration:none;
 	}
+	my-email::after {
+		content: attr(data-domain);
+	}
+	my-email::before {
+		content: attr(data-user) "\0040";
+	}
 	</style>
 </head>
 <body>
@@ -78,6 +84,7 @@
 		<p>Department of Computer Science</p>
 		<p>Rutgers, The State University of New Jersey</p>
 		<p>Piscataway, NJ 08854</p>
+		<p><my-email data-user="zad7" data-domain="cs.rutger.edu"></my-email></p>
 	</div>
 	<div id="main">
 		<h2>Column 1</h2>
